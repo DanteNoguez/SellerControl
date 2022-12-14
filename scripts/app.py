@@ -70,8 +70,8 @@ files = st.container()
 
 with features:
   st.text('Los reportes utilizados para generar el archivo fusión son:') 
-  code1 = "Reporte quincenal de Teikametrics: Teikametrics -> Product catalog -> Seleccionar fechas -> Export"
-  code2 = "Reporte mensual de Teikametrics: Teikametrics -> Product catalog -> Seleccionar fechas -> Export"
+  code1 = "Reporte quincenal de Teikametrics: Teikametrics -> Product catalog -> Seleccionar fechas y habilitar periodos previos -> Export"
+  code2 = "Reporte mensual de Teikametrics: Teikametrics -> Product catalog -> Seleccionar fechas y habilitar periodos previos -> Export"
   code3 = "MercadoLibre: MercadoLibre -> Publicaciones -> Gestión de stock Full -> Descargar reportes de stock -> Reporte general de stock"
   st.code(code1)
   st.code(code2)
