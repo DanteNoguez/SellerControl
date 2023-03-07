@@ -17,7 +17,7 @@ def merge_data(teika1: str, teika2: str, mercadolibre: str):
   amz_mes = pd.read_csv(teika2).iloc[:,[0, 2, 11, 12, -1]]
   amz_mes = pd.DataFrame(amz_mes).rename(columns={'Units Sold': 'Ventas AMZ último mes', 'Previous Units Sold': 'Ventas AMZ penúltimo mes', 'Current inventory quantity': 'Stock AMZ', 'SKU Name': 'Producto'}).sort_values('Producto', ignore_index=True)
 
-  # Cargar datos de Amazon
+  # Cargar datos de MercadoLibre
   meli = pd.read_excel(mercadolibre, skiprows=3).fillna(0).drop(index=0, columns='Título de la publicación').iloc[:, [1, 7, -1]]
 
   # Juntar reportes y acomodar columnas
