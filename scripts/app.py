@@ -10,11 +10,11 @@ from openpyxl import Workbook
 #@st.cache
 def merge_data(teika1: str, teika2: str, mercadolibre: str):
   # Cargar datos quincenales 
-  amz_quincena = pd.read_csv(teika1).iloc[:,[0, 2, 11, 12, -1]]
+  amz_quincena = pd.read_csv(teika1).iloc[:,[0, 2, 13, 14, -1]]
   amz_quincena = pd.DataFrame(amz_quincena).rename(columns={'Units Sold': 'Ventas AMZ última quincena', 'Previous Units Sold': 'Ventas AMZ penúltima quincena', 'Current inventory quantity': 'Stock AMZ', 'SKU Name': 'Producto'}).sort_values('Producto', ignore_index=True)
 
   # Cargar datos mensuales
-  amz_mes = pd.read_csv(teika2).iloc[:,[0, 2, 11, 12, -1]]
+  amz_mes = pd.read_csv(teika2).iloc[:,[0, 2, 13, 14, -1]]
   amz_mes = pd.DataFrame(amz_mes).rename(columns={'Units Sold': 'Ventas AMZ último mes', 'Previous Units Sold': 'Ventas AMZ penúltimo mes', 'Current inventory quantity': 'Stock AMZ', 'SKU Name': 'Producto'}).sort_values('Producto', ignore_index=True)
 
   # Cargar datos de MercadoLibre
